@@ -1,8 +1,8 @@
 static void swap(int *a, int *b) {
   int temp;
   temp = *a;
-  a* = b*;
-  b* = temp;
+  *a = *b;
+  *b = temp;
 }
 
 static void bbs(int *arr, int n) {
@@ -22,10 +22,31 @@ static void bbs(int *arr, int n) {
   }
 }
 
-static void ft_putnbr(char c) {
-  write(1, &n, 1);
+static void ft_putnbr(int n){
+  int c;
+  if (n == -2147483647) {
+    write(1, "-2147483647", 11);
+    return ;
+  }
+
+  if (n < 0){
+    write(1, "-", 1);
+    n = -n;
+  }
+
+  if (n >= 10) {
+    ft_putnbr(n / 10);
+  }
+
+  c = (n % 10) + '0';
+  write(1, &c, 1);
 }
 
-static void ft_nbr(int n){
-  if ()
+int main(void) {
+  int a[] = {64, 34, 25, 12, 22, 11, 90};
+  int n = 7;
+  int i = 0;
+  for (i = 0; i < n -1; i++) {
+    ft_putnbr(a[i]);
+  }
 }
