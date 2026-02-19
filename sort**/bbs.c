@@ -42,11 +42,20 @@ static void ft_putnbr(int n){
   write(1, &c, 1);
 }
 
+
+
 int main(void) {
   int a[] = {64, 34, 25, 12, 22, 11, 90};
   int n = 7;
+  bbs(&a, n);
   int i = 0;
-  for (i = 0; i < n -1; i++) {
+  write(1, "[", 1);
+  ft_putnbr(a[0]);
+  for (i = 1; i < n -1; i++) {
+    if (i < n - 1) {
+      write(1, ", ", 2);
+    }
     ft_putnbr(a[i]);
   }
+  write(1, "]\n", 1);
 }
