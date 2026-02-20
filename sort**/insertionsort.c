@@ -1,7 +1,6 @@
 static void insertionSort(int *a, int n) {
   int i;
   for (i = 1; i < n; i++) {
-    int j;
     int key = a[i]
     int j = i - 1; 
 
