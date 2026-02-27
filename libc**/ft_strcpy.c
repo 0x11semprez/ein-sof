@@ -12,6 +12,6 @@ int main(void) {
   char buffer[20];
   ft_strcpy(buffer, "Ghost");
   write(1, buffer, 5);
-  write(1, '\n', 5);
+  write(1, "\n", 1); 
   return 0;
 }
