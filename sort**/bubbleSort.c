@@ -35,11 +35,12 @@ static void ft_putnbr(int n){
   }
 
   if (n >= 10) {
-    ft_putnbr(n / 10);
+    ft_putnbr(n/10);
+    ft_putnbr(n%10);
+  } else {
+    c = n + '0';
+    write(1, &c, 1);
   }
-
-  c = (n % 10) + '0';
-  write(1, &c, 1);
 }
 
 
